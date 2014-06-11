@@ -6,20 +6,19 @@
 What are Dorks?
 ----------------------------
 
-	Using dorks is not hard, its pretty easy if you know what you are doing and it need to be one of the first things that you will learn.
+	Using dorks is not hard, it's pretty easy if you know what you are doing and also it's a cool way to step in the hacking world.
 	
-	Dorks are keywords that if searched on search-engines can return some specific webpages, examples:
+	Dorks are keywords that if used on search-engines can return some specific webpages, examples:
 		-> An site admin page.
 		-> Exploits
 		-> Restricted Areas
 		Etc..
-	Using dorks is pretty useful to find vulnerable pages and with it you can, for example, get a great number of possible sqlinjectable pages.
-
+	Using dorks is pretty useful to find vulnerable pages and it's widely used to mass-search some exploits.
 ------------------------
  Using Dorks
 ------------------------
 
-	Get interested on dorks? Here i'll teach you how to use dorks with google, google has lots of keywords to "filter" google results, some examples are:
+	Here I'll teach you how to use dorks with google, google has lots of keywords to "filter" google results, some examples are:
 	
 		-> "site:" - Search on specific url, great to search, for example, just on .gov.br sites.
 		-> "inurl:" - Search sites that have a specific string in their URL, for example, you can use it to find just sites with "php?id=" in the URL.
@@ -42,7 +41,7 @@ What are Dorks?
 Finding SQL Injectable pages with dorks
 -------------------------------------------------------------
 
-Those are some dorks to find sqlinjectable pages: (".php" part is optional)
+Those are some dorks to find SQL injectable pages: (".php" part is optional)
 Modify them as you like.
 
 	-> "inurl:.php?id="
@@ -68,14 +67,14 @@ Modify them as you like.
 	-> "inurl:.php?pageid="
 	-> "inurl:.php?page_id="
 	
-In "HackBox" (See it at my GitHub) we have an tool to find sqlinjectable pages with dorks and test it.
+In "HackBox" (See it at my GitHub) we have an tool to find SQL injectable pages with dorks and test it.
 You can also test xss on those :)
 
 -------------------------------------------------------------
      Finding Admin pages with dorks
 -------------------------------------------------------------
 
-This is not easy, but its possible, there is a list of the most common admin pages:
+This is not easy, but it's possible, there is a list of the most common admin pages:
 If you want to find an site admin page, use this as dork: "site:www.site.org *dork*"
 --- The Best way to find an admin page is manually. ----
 For the way, there are some dorks.
@@ -275,5 +274,5 @@ For the way, there are some dorks.
 CONCLUSION
 ---------------------
 
-	Google is a great tool and must be used. Here i have explained some basics, its your time to explore it :)
+	Google is a great tool to play around with some exploits. Here i have explained some basics, it's your time to explore :)
 	Contribute for it!
