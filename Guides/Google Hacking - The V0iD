@@ -1,0 +1,279 @@
+# Google Hacking Manual
+# Author: TheV0iD
+# Date: 2014.06.11
+
+---------------------------
+What are Dorks?
+----------------------------
+
+	Using dorks is not hard, its pretty easy if you know what you are doing and it need to be one of the first things that you will learn.
+	
+	Dorks are keywords that if searched on search-engines can return some specific webpages, examples:
+		-> An site admin page.
+		-> Exploits
+		-> Restricted Areas
+		Etc..
+	Using dorks is pretty useful to find vulnerable pages and with it you can, for example, get a great number of possible sqlinjectable pages.
+
+------------------------
+ Using Dorks
+------------------------
+
+	Get interested on dorks? Here i'll teach you how to use dorks with google, google has lots of keywords to "filter" google results, some examples are:
+	
+		-> "site:" - Search on specific url, great to search, for example, just on .gov.br sites.
+		-> "inurl:" - Search sites that have a specific string in their URL, for example, you can use it to find just sites with "php?id=" in the URL.
+		-> "intitle:" - Search pages that have a specific string in their page name. For example find pages titled "admin panel"
+		-> "filetype:" - Search files that have an specific extensions. Example: "filetype:txt" will find txt files.
+		-> "allinurl:" - Search urls that have all the keywords in the query
+		-> "allintitle:" - Search for pages that have in title all the keywords of the query
+		-> "link:" - Searches for external links to pages
+		-> "allintext:" - Searches for a string inside an page.
+
+	Example querys using dorks:
+	
+		-> "site:.gov.br inurl:.php?id=" - Search for .gov.br sites with ".php?id=" in their URLS (Good to search sqlinjectable pages).
+		-> "inurl:/admin/login.asp" - Search for some admin login pages.
+		-> "inurl:login.asp" - Search for common login pages
+		-> "allinurl:"exchange/logon.asp" - Microsoft (R) Outlook (TM) Web Access is a Microsoft Exchange Active Server Application that gives you private access to your Microsoft Outlook or Microsoft Exchange personal e-mail account so that you can view your Inbox from any Web Browser.
+
+
+-------------------------------------------------------------
+Finding SQL Injectable pages with dorks
+-------------------------------------------------------------
+
+Those are some dorks to find sqlinjectable pages: (".php" part is optional)
+Modify them as you like.
+
+	-> "inurl:.php?id="
+	-> "inurl:.php?cat="
+	-> "inurl:.php?num="
+	-> "inurl:.php?storeid="
+	-> "inurl:.php?bookid="
+	-> "inurl:.php?cartid="
+	-> "inurl:.php?iCat="
+	-> "inurl:.php?CatalogID="
+	-> "inurl:.php?catid="
+	-> "inurl:.php?product_id="
+	-> "inurl:.php?service_id="
+	-> "inurl:.php?item="
+	-> "inurl:.php?title="
+	-> "inurl:.php?iid="
+	-> "inurl:.php?type="
+	-> "inurl:.php?action="
+	-> "inurl:.php?pid="
+	-> "inurl:.php?i="
+	-> "inurl:.php?ref="
+	-> "inurl:.php?view="
+	-> "inurl:.php?pageid="
+	-> "inurl:.php?page_id="
+	
+In "HackBox" (See it at my GitHub) we have an tool to find sqlinjectable pages with dorks and test it.
+You can also test xss on those :)
+
+-------------------------------------------------------------
+     Finding Admin pages with dorks
+-------------------------------------------------------------
+
+This is not easy, but its possible, there is a list of the most common admin pages:
+If you want to find an site admin page, use this as dork: "site:www.site.org *dork*"
+--- The Best way to find an admin page is manually. ----
+For the way, there are some dorks.
+
+	-> "inurl:admin" -Not precise, sometimes it will show not admin pages
+	-> "inurl:admin1.php"
+	-> "inurl:admin1.html"
+	-> "inurl:admin2.php"
+	-> "inurl:admin2.html"
+	-> "inurl:yonetim.php"
+	-> "inurl:yonetim.html"
+	-> "inurl:yonetici.php"
+	-> "inurl:yonetici.html"
+	-> "inurl:admin/account.php"
+	-> "inurl:admin/account.html"
+	-> "inurl:admin/index.php"
+	-> "inurl:admin/index.html"
+	-> "inurl:admin/login.php"
+	-> "inurl:admin/login.html"
+	-> "inurl:admin/home.php"
+	-> "inurl:admin/controlpanel.html"
+	-> "inurl:admin/controlpanel.php"
+	-> "inurl:admin.php"
+	-> "inurl:admin.html"
+	-> "inurl:admin/cp.php"
+	-> "inurl:admin/cp.html"
+	-> "inurl:cp.php"
+	-> "inurl:cp.html"
+	-> "inurl:administrator/"
+	-> "inurl:administrator/index.html"
+	-> "inurl:administrator/index.php"
+	-> "inurl:administrator/login.html"
+	-> "inurl:administrator/login.php"
+	-> "inurl:administrator/account.html"
+	-> "inurl:administrator/account.php"
+	-> "inurl:administrator.php"
+	-> "inurl:administrator.html"
+	-> "inurl:login.html"
+	-> "inurl:modelsearch/login.php"
+	-> "inurl:moderator.php"
+	-> "inurl:moderator.html"
+	-> "inurl:moderator/login.php"
+	-> "inurl:moderator/login.html"
+	-> "inurl:moderator/admin.php"
+	-> "inurl:moderator/admin.html"
+	-> "inurl:account.php"
+	-> "inurl:account.html"
+	-> "inurl:controlpanel/"
+	-> "inurl:controlpanel.php"
+	-> "inurl:controlpanel.html"
+	-> "inurl:admincontrol.php"
+	-> "inurl:admincontrol.html"
+	-> "inurl:adminpanel.php"
+	-> "inurl:adminpanel.html"
+	-> "inurl:admin1.asp"
+	-> "inurl:admin2.asp"
+	-> "inurl:yonetim.asp"
+	-> "inurl:yonetici.asp"
+	-> "inurl:admin/account.asp"
+	-> "inurl:admin/index.asp"
+	-> "inurl:admin/login.asp"
+	-> "inurl:admin/home.asp"
+	-> "inurl:admin/controlpanel.asp"
+	-> "inurl:admin.asp"
+	-> "inurl:admin/cp.asp"
+	-> "inurl:cp.asp"
+	-> "inurl:administrator/index.asp"
+	-> "inurl:administrator/login.asp"
+	-> "inurl:administrator/account.asp"
+	-> "inurl:administrator.asp"
+	-> "inurl:login.asp"
+	-> "inurl:modelsearch/login.asp"
+	-> "inurl:moderator.asp"
+	-> "inurl:moderator/login.asp"
+	-> "inurl:moderator/admin.asp"
+	-> "inurl:account.asp"
+	-> "inurl:controlpanel.asp"
+	-> "inurl:admincontrol.asp"
+	-> "inurl:adminpanel.asp"
+	-> "inurl:fileadmin/"
+	-> "inurl:fileadmin.php"
+	-> "inurl:fileadmin.asp"
+	-> "inurl:fileadmin.html"
+	-> "inurl:administration/"
+	-> "inurl:administration.php"
+	-> "inurl:administration.html"
+	-> "inurl:sysadmin.php"
+	-> "inurl:sysadmin.html"
+	-> "inurl:phpmyadmin/"
+	-> "inurl:myadmin/"
+	-> "inurl:sysadmin.asp"
+	-> "inurl:sysadmin/"
+	-> "inurl:ur-admin.asp"
+	-> "inurl:ur-admin.php"
+	-> "inurl:ur-admin.html"
+	-> "inurl:ur-admin/"
+	-> "inurl:Server.php"
+	-> "inurl:Server.html"
+	-> "inurl:Server.asp"
+	-> "inurl:Server/"
+	-> "inurl:wp-admin/"
+	-> "inurl:administr8.php"
+	-> "inurl:administr8.html"
+	-> "inurl:administr8/"
+	-> "inurl:administr8.asp"
+	-> "inurl:webadmin/"
+	-> "inurl:webadmin.php"
+	-> "inurl:webadmin.asp"
+	-> "inurl:webadmin.html"
+	-> "inurl:administratie/"
+	-> "inurl:admins/"
+	-> "inurl:admins.php"
+	-> "inurl:admins.asp"
+	-> "inurl:admins.html"
+	-> "inurl:administrivia/"
+	-> "inurl:Database_Administration/"
+	-> "inurl:WebAdmin/"
+	-> "inurl:useradmin/"
+	-> "inurl:sysadmins/"
+	-> "inurl:admin1/"
+	-> "inurl:system-administration/"
+	-> "inurl:administrators/"
+	-> "inurl:pgadmin/"
+	-> "inurl:directadmin/"
+	-> "inurl:staradmin/"
+	-> "inurl:ServerAdministrator/"
+	-> "inurl:SysAdmin/"
+	-> "inurl:administer/"
+	-> "inurl:LiveUser_Admin/"
+	-> "inurl:sys-admin/"
+	-> "inurl:typo3/"
+	-> "inurl:panel/"
+	-> "inurl:cpanel/"
+	-> "inurl:cPanel/"
+	-> "inurl:cpanel_file/"
+	-> "inurl:platz_login/"
+	-> "inurl:rcLogin/"
+	-> "inurl:blogindex/"
+	-> "inurl:formslogin/"
+	-> "inurl:autologin/"
+	-> "inurl:support_login/"
+	-> "inurl:meta_login/"
+	-> "inurl:manuallogin/"
+	-> "inurl:simpleLogin/"
+	-> "inurl:loginflat/"
+	-> "inurl:utility_login/"
+	-> "inurl:showlogin/"
+	-> "inurl:memlogin/"
+	-> "inurl:members/"
+	-> "inurl:login-redirect/"
+	-> "inurl:sub-login/"
+	-> "inurl:wp-login/"
+	-> "inurl:login1/"
+	-> "inurl:dir-login/"
+	-> "inurl:login_db/"
+	-> "inurl:xlogin/"
+	-> "inurl:smblogin/"
+	-> "inurl:customer_login/"
+	-> "inurl:UserLogin/"
+	-> "inurl:login-us/"
+	-> "inurl:acct_login/"
+	-> "inurl:admin_area/"
+	-> "inurl:bigadmin/"
+	-> "inurl:project-admins/"
+	-> "inurl:phppgadmin/"
+	-> "inurl:pureadmin/"
+	-> "inurl:sql-admin/"
+	-> "inurl:openvpnadmin/"
+	-> "inurl:wizmysqladmin/"
+	-> "inurl:vadmind/"
+	-> "inurl:ezsqliteadmin/"
+	-> "inurl:hpwebjetadmin/"
+	-> "inurl:newsadmin/"
+	-> "inurl:adminpro/"
+	-> "inurl:Lotus_Domino_Admin/"
+	-> "inurl:bbadmin/"
+	-> "inurl:vmailadmin/"
+	-> "inurl:ccp14admin/"
+	-> "inurl:irc-macadmin/"
+	-> "inurl:banneradmin/"
+	-> "inurl:sshadmin/"
+	-> "inurl:phpldapadmin/"
+	-> "inurl:macadmin/"
+	-> "inurl:administratoraccounts/"
+	-> "inurl:admin4_account/"
+	-> "inurl:admin4_colon/"
+	-> "inurl:radmind-1/"
+	-> "inurl:Super-Admin/"
+	-> "inurl:AdminTools/"
+	-> "inurl:cmsadmin/"
+	-> "inurl:phpSQLiteAdmin/"
+	-> "inurl:server_admin_small/"
+	-> "inurl:database_administration/"
+	-> "inurl:system_administration"
+	
+---------------------
+CONCLUSION
+---------------------
+
+	Google is a great tool and must be used. Here i have explained some basics, its your time to explore it :)
+	Contribute for it!
